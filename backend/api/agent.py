@@ -60,13 +60,12 @@ class AgentExecuter:
 
         Here we are defining our llm model and our text embedding model 
         """
-        os.environ["GOOGLE_API_KEY"]="AIzaSyAMs1Y4xmSrAadzADmZha-baQxTJg2Tq5Q"
-  
+       
         model_name = "models/text-embedding-004"
 
         Settings.llm = Gemini(
             model="models/gemini-1.5-flash",
-            api_key="AIzaSyAMs1Y4xmSrAadzADmZha-baQxTJg2Tq5Q",  # uses GOOGLE_API_KEY env var by default
+             # uses GOOGLE_API_KEY env var by default
         )
         Settings.embed_model = GeminiEmbedding(
             model_name=model_name,
@@ -74,7 +73,7 @@ class AgentExecuter:
 
     def Index_store(self):
         # Create Pinecone Vector Store
-        pc = Pinecone(api_key="pcsk_23XXfP_GHWmfdm7WGfPMmTRZACC917oLVk8LxueaGXHp27p6hHaE9rzz9RMog6i8Z6jy7S")
+        pc = Pinecone(api_key=)
 
         # pc.create_index(
         #     name="quickstart",
